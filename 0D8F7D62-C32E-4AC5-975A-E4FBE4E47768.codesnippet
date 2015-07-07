@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>__fenghuolun</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>Preprocessor</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UIActivityIndicatorView *)lvm_activityIndicatorView {
+  if (!_lvm_activityIndicatorView) {
+      UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+      activityIndicatorView.center = self.view.center;
+      activityIndicatorView.hidesWhenStopped = YES;
+      _lvm_activityIndicatorView = activityIndicatorView;
+      [self.view addSubview:activityIndicatorView];
+      [self.view bringSubviewToFront:activityIndicatorView];
+  }
+  return _lvm_activityIndicatorView;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0D8F7D62-C32E-4AC5-975A-E4FBE4E47768</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>风火轮</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
