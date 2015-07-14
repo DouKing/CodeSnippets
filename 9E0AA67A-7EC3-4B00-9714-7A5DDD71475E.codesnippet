@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>__nslog</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#define NSLog(format, ...) do { \
+fprintf(stderr, "&lt;%s : %d&gt; %s\n", \
+[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], \
+__LINE__, __func__); \
+(NSLog)((format), ##__VA_ARGS__); \
+fprintf(stderr, "-------\n"); \
+} while (0)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9E0AA67A-7EC3-4B00-9714-7A5DDD71475E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>强大的NSLog</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
