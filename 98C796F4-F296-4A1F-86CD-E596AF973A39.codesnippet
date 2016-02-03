@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>__viewmodel</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@interface &lt;#LVMBrandListViewController#&gt; ()
+@property (nonatomic, strong) LVM&lt;#ClassName#&gt;ViewModel *lvm_viewModel;
+&lt;#@property (nonatomic, weak) UITableView *lvm_tableView;#&gt;
+@property (nonatomic, weak) UIActivityIndicatorView *lvm_activityIndicatorView;
+@end
+
+@implementation &lt;#LVMBrandListViewController#&gt;
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  [self _lvm_initial];
+  [self _lvm_setupViewModel];
+  [self _lvm_setupSubViews];
+  [self _lvm_setupNotifications];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+}
+
+- (void)_lvm_initial {
+  
+}
+
+- (void)_lvm_setupViewModel {
+  
+}
+
+- (void)_lvm_setupNotifications {
+  
+}
+
+#pragma mark - SubViews -
+- (void)_lvm_setupSubViews {
+  [self _lvm_setupTableView];
+}
+
+- (void)_lvm_setupTableView {
+  
+}
+
+#pragma mark - Actions -
+
+#pragma mark - Delegate Methods -
+#pragma mark - UITableViewDelegate &amp; DataSource
+
+#pragma mark - setter &amp; getter
+- (UIActivityIndicatorView *)lvm_activityIndicatorView {
+  if (!_lvm_activityIndicatorView) {
+    UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    activityIndicatorView.center = self.view.center;
+    activityIndicatorView.hidesWhenStopped = YES;
+    _lvm_activityIndicatorView = activityIndicatorView;
+    [self.view addSubview:activityIndicatorView];
+    [self.view bringSubviewToFront:activityIndicatorView];
+  }
+  return _lvm_activityIndicatorView;
+}
+
+@end
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>98C796F4-F296-4A1F-86CD-E596AF973A39</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ViewModel</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

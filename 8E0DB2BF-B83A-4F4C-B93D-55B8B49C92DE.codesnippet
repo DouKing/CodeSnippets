@@ -3,29 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>__single</string>
+	<string>__beginnonnull</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>+ (instancetype)shared&lt;#object#&gt; {
-    static id _sharedInstance = nil;
-    static dispatch_once_t oncePredicate;
-    dispatch_once(&amp;oncePredicate, ^{
-        _sharedInstance = [[self alloc] init];
-    });
-    return _sharedInstance;
-}
-</string>
+	<string>NS_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_END</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>AB98E30A-A22F-4FAB-8A5B-9C44B0E32725</string>
+	<string>8E0DB2BF-B83A-4F4C-B93D-55B8B49C92DE</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>Accessor Method for SingleObject</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>SingleAccessor</string>
+	<string>nonnull宏定义</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
