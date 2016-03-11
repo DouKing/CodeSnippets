@@ -18,10 +18,10 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.view.backgroundColor = [UIColor whiteColor];
-  [self _&lt;#prefix#&gt;_initial];
-  [self _&lt;#prefix#&gt;_setupSubViews];
-  [self _&lt;#prefix#&gt;_setupViewModel];
-  [self _&lt;#prefix#&gt;_setupObserver];
+  [self _initial];
+  [self _setupSubViews];
+  [self _setupViewModel];
+  [self _setupObserver];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -33,20 +33,20 @@
 }
 
 #pragma mark - Initial -
-- (void)_&lt;#prefix#&gt;_initial {
+- (void)_initial {
   
 }
 
-- (void)_&lt;#prefix#&gt;_setupViewModel {
+- (void)_setupViewModel {
   
 }
 
-- (void)_&lt;#prefix#&gt;_setupObserver {
+- (void)_setupObserver {
   
 }
 
 #pragma mark - SubViews -
-- (void)_&lt;#prefix#&gt;_setupSubViews {
+- (void)_setupSubViews {
   
 }
 
