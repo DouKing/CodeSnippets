@@ -3,25 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>__ignoreleaks</string>
+	<string>__enumstring</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-&lt;#statement#&gt;
-#pragma clang diagnostic pop</string>
+	<string>typedef NS_ENUM(NSInteger, &lt;#XXType#&gt;){
+    &lt;#XXType1#&gt;,
+    &lt;#XXType2#&gt;
+};
+const NSString *XXTypeNameMapping[] = {
+    [&lt;#XXType1#&gt;] = @"Type1",
+    [&lt;#XXType2#&gt;] = @"Type2"
+};</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F1D95745-BA81-4343-A0D5-DA11C034433A</string>
+	<string>577A7EC2-13D2-4913-865F-57B6CA21044D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ignore performSelector leaks</string>
+	<string>字符串枚举关联</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
