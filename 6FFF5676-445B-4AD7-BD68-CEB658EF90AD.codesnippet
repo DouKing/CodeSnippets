@@ -3,22 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>__returnvalue</string>
+	<string>__until</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>&lt;#RETURN_VALUE_RECEIVER#&gt; = {(
-    &lt;#statement#&gt;
-    &lt;#RETURN_VALUE#&gt;
-)};</string>
+	<string>while (!&lt;#condition#&gt;) {
+    &lt;#statements#&gt;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FE89738B-72CF-4BA2-81A2-4B49FEA17358</string>
+	<string>6FFF5676-445B-4AD7-BD68-CEB658EF90AD</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>小括号内联表达式</string>
+	<string>Until</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
