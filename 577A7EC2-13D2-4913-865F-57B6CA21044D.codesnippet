@@ -6,7 +6,7 @@
 	<string>__enumstring</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>typedef NS_ENUM(NSInteger, &lt;#XXType#&gt;){
