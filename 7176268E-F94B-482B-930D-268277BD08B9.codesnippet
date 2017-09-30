@@ -3,24 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>__rgbcolor</string>
+	<string>__label</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#ifndef RGBColorFromHex
-#define RGBColor(rgbValue, alphaValue) [UIColor colorWithRed:((float)((rgbValue &amp; 0xFF0000) &gt;&gt; 16))/255.0 green:((float)((rgbValue &amp; 0xFF00) &gt;&gt; 8))/255.0 blue:((float)(rgbValue &amp; 0xFF))/255.0 alpha:alphaValue]
-#endif</string>
+	<string>({
+    UILabel *label = [[UILabel alloc] init&lt;#ForAutoLayout#&gt;];
+    label.font = [UIFont &lt;#font#&gt;];
+    label.textColor = &lt;#RGBColor(0x1a191e)#&gt;;
+    &lt;#label.textAlignment = NSTextAlignmentCenter;#&gt;
+    label;
+});</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>89C0A4E8-2513-4DB7-B97B-98C8867860A6</string>
+	<string>7176268E-F94B-482B-930D-268277BD08B9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>RGBColor define</string>
+	<string>return label</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

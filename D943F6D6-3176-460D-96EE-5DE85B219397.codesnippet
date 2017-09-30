@@ -3,24 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>__rgbcolor</string>
+	<string>rgba</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#ifndef RGBColorFromHex
-#define RGBColor(rgbValue, alphaValue) [UIColor colorWithRed:((float)((rgbValue &amp; 0xFF0000) &gt;&gt; 16))/255.0 green:((float)((rgbValue &amp; 0xFF00) &gt;&gt; 8))/255.0 blue:((float)(rgbValue &amp; 0xFF))/255.0 alpha:alphaValue]
-#endif</string>
+	<string>RGBColorAndAlpha(0x&lt;#1a191e#&gt;, &lt;#1.0#&gt;)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>89C0A4E8-2513-4DB7-B97B-98C8867860A6</string>
+	<string>D943F6D6-3176-460D-96EE-5DE85B219397</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>RGBColor define</string>
+	<string>RGBColorAndAlpha</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

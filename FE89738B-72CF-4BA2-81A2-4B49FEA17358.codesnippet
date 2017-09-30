@@ -9,10 +9,10 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>&lt;#RETURN_VALUE_RECEIVER#&gt; = {(
+	<string>&lt;#RETURN_VALUE_RECEIVER#&gt; = ({
     &lt;#statement#&gt;
     &lt;#RETURN_VALUE#&gt;
-)};</string>
+});</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>FE89738B-72CF-4BA2-81A2-4B49FEA17358</string>
 	<key>IDECodeSnippetLanguage</key>
