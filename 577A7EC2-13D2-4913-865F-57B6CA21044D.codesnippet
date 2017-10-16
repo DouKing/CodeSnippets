@@ -13,7 +13,7 @@
     &lt;#XXType1#&gt;,
     &lt;#XXType2#&gt;
 };
-const NSString *XXTypeNameMapping[] = {
+static NSString * const &lt;#XXType#&gt;NameMapping[] = {
     [&lt;#XXType1#&gt;] = @"Type1",
     [&lt;#XXType2#&gt;] = @"Type2"
 };</string>
