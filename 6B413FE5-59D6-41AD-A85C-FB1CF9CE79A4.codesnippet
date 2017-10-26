@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>__weakdefine</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// __weak
+#ifndef    __weakly
+  #if __has_feature(objc_arc)
+
+    #define __weakly( x ) \
+    _Pragma("clang diagnostic push") \
+    _Pragma("clang diagnostic ignored \"-Wshadow\"") \
+    __weak __typeof__(x) __weak_##x##__ = x; \
+    _Pragma("clang diagnostic pop")
+
+  #else
+
+    #define __weakly( x ) \
+    _Pragma("clang diagnostic push") \
+    _Pragma("clang diagnostic ignored \"-Wshadow\"") \
+    __block __typeof__(x) __block_##x##__ = x; \
+    _Pragma("clang diagnostic pop")
+
+  #endif
+#endif
+
+// __strong
+#ifndef    __strongly
+  #if __has_feature(objc_arc)
+
+    #define __strongly( x ) \
+    _Pragma("clang diagnostic push") \
+    _Pragma("clang diagnostic ignored \"-Wshadow\"") \
+    __strong __typeof__(x) x = __weak_##x##__; \
+    _Pragma("clang diagnostic pop")
+
+  #else
+
+    #define __strongly( x ) \
+    _Pragma("clang diagnostic push") \
+    _Pragma("clang diagnostic ignored \"-Wshadow\"") \
+    __typeof__(x) x = __block_##x##__; \
+    _Pragma("clang diagnostic pop")
+
+  #endif
+#endif
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>6B413FE5-59D6-41AD-A85C-FB1CF9CE79A4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>define a weak and a strong type</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Weak/Strong type define</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
