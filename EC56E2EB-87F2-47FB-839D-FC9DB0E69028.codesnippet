@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>__tableview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeExpression</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>({
+    UITableView *tv = [[UITableView alloc] initWithFrame:CGRectZero style:&lt;#UITableViewStylePlain#&gt;];
+    tv.backgroundColor = &lt;#[UIColor lightTextColor]#&gt;;
+      tv.delegate = self;
+      tv.dataSource = self;
+    [tv registerClass:&lt;#[UITableViewCell class]#&gt; forCellReuseIdentifier:&lt;#NSStringFromClass([UITableViewCell class])#&gt;];
+      tv;
+    });</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>EC56E2EB-87F2-47FB-839D-FC9DB0E69028</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>return table view</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
