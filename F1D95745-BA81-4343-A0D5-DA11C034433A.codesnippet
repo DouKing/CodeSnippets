@@ -6,7 +6,7 @@
 	<string>__ignoreleaks</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>#pragma clang diagnostic push
