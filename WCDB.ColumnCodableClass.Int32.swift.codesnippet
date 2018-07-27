@@ -9,17 +9,15 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>class &lt;#Class name#&gt;: WCDBSwift.ColumnCodable, WCDBSwift.LiteralValueConvertible, WCDBSwift.ExpressionCanBeOperated {
-	static var columnType: ColumnType {
-		return .integer32
-	}
+	<string>class &lt;#Class name#&gt;: WCDBSwift.ColumnCodable {
+    typealias FundamentalType = Int32
     
-    required init?(with value: FundamentalValue) {
-    	&lt;#init with value.int32Value#&gt;
+    required init?(with value: Int32) {
+        
     }
     
-    func archivedValue() -&gt; FundamentalValue {
-        return FundamentalValue(&lt;#Int32#&gt;)
+    func archivedValue() -&gt; Int32? {
+        
     }
 }
 </string>
@@ -32,6 +30,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
