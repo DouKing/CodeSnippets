@@ -2,20 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>-interface</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeExpression</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>NSString *sessionId = CFBridgingRelease(CFUUIDCreateString(nil, CFUUIDCreate(nil)));
-  sessionId = [sessionId stringByReplacingOccurrencesOfString:@"-" withString:@""];
-  NSLog(@"sessionId %@", sessionId);</string>
+	<string>- (&lt;#void#&gt;)&lt;#lvm_#&gt;&lt;#methodName#&gt;;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>9411BE3F-89B6-4FB4-A08C-8B5F1E7835D8</string>
+	<string>2AEE8144-2C4E-4E66-8A6F-E4743592CC7E</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>声明</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>生成32位随机数</string>
+	<string>实例方法</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

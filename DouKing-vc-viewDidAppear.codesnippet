@@ -2,26 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+  <key>IDECodeSnippetCompletionPrefix</key>
+  <string>viewdidappear</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#ifdef DEBUG
-#define debugLog(...) NSLog(__VA_ARGS__)
-#define debugMethod() NSLog(@"%s", __func__)
-#else
-#define debugLog(...)
-#define debugMethod()
-#endif</string>
+	<string>- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>9BA4ED1D-5272-4F31-824C-BB839532A013</string>
+	<string>E3B2452E-A99B-49CD-B7C5-B7F217E98DE0</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>NSLog宏定义</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>NSLog_define</string>
+	<string>view did appear</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

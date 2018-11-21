@@ -3,19 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>__if</string>
+	<string>-implementation</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeExpression</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>if &lt;#condition#&gt; { &lt;#return#&gt; }</string>
+	<string>- (&lt;#void#&gt;)&lt;#_lvm_#&gt;&lt;#methodName#&gt; {
+  
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>24354A42-E0E2-44E4-A899-102827A036F4</string>
+	<string>3A4094C9-DE28-45CE-99EF-C33738980759</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>实现</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>if single line</string>
+	<string>实例方法</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

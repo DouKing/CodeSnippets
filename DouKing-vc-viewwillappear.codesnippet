@@ -2,30 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+  <key>IDECodeSnippetCompletionPrefix</key>
+  <string>viewwillappear</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size
-{
-  @autoreleasepool {
-    CGRect rect = CGRectMake(0, 0, size.width, size.height);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, color.CGColor);
-    CGContextFillRect(context, rect);
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
-  }
+	<string>- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6B67170D-898C-4FBE-A0EB-10304DCB7F1D</string>
+	<string>9DA94A57-F50C-4384-A09C-6997B205520A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIColor生成UIImage</string>
+	<string>view will appear</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
