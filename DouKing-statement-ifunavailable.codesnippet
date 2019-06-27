@@ -3,24 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>__ifavailable</string>
+	<string>ifunavailable</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeExpression</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>if (@available(&lt;#iOS#&gt; &lt;#11.0#&gt;, *)) {
-
-  }</string>
+	<string>if (@available(&lt;#iOS#&gt; &lt;#11.0#&gt;, *)) {} else {
+        &lt;#code#&gt;
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>EB8C2EC9-B9A1-425E-87AD-6BD62C4D2E0D</string>
+	<string>A6605D0F-554F-4816-BB74-AFF6B2363E36</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>confidation if available</string>
+	<string>confidation if unavailable</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
