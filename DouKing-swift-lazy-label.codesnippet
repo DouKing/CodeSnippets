@@ -3,27 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>uiedgeinsertsmake</string>
+	<string>__label</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
-		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>(UIEdgeInsets) {
-    &lt;#top#&gt;, &lt;#left#&gt;,
-    &lt;#down#&gt;, &lt;#right#&gt;
-}</string>
+	<string>lazy var &lt;#name#&gt;Label: UILabel = {
+		let label = UILabel()
+	label.font = UIFont.&lt;#mdf_regularPingFSCFont(ofSize: 14)#&gt;
+	label.textColor = &lt;#.hex("333333")#&gt;
+	&lt;#label.text = ""#&gt;
+		return label
+	}()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4AB7099F-69D7-46EC-9D37-0C0C5727E369</string>
+	<string>5B1D4E7D-E6CD-41AB-ADEE-833F89E74E3B</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIEdgeInsets Struct Style</string>
+	<string>swift return label</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
