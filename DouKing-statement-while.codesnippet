@@ -9,10 +9,10 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>var i = 0
+	<string>var i = &lt;#0#&gt;
 while &lt;#i &lt;= #&gt; {
+    defer { i += 1 }
     &lt;#statement#&gt;
-    i += 1
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>D7F816DE-E12D-452A-9D63-4535E77BD0FA</string>
