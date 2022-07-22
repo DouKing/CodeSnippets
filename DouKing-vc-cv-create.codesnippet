@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>__vc-cv-create</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension &lt;#ViewController#&gt; {
+    private func createLayout() -&gt; UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout {
+            (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -&gt; NSCollectionLayoutSection? in
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                  heightDimension: .fractionalHeight(1.0))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            item.contentInsets = NSDirectionalEdgeInsets(top: 0.5, leading: 0, bottom: 0, trailing: 0)
+            
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                   heightDimension: .absolute(44))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+            
+            let section = NSCollectionLayoutSection(group: group)
+            section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20)
+            
+            let sectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                           heightDimension: .absolute(44))
+            let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+                layoutSize: sectionHeaderSize,
+                elementKind: &lt;#ViewController#&gt;.sectionHeaderElementKind,
+                alignment: .top)
+            section.boundarySupplementaryItems = [sectionHeader]
+            
+            let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: &lt;#ViewController#&gt;.sectionBackgroundDecorationElementKind)
+            section.decorationItems = [sectionBackgroundDecoration]
+            
+            return section
+        }
+        layout.register(
+            UICollectionReusableView.self,
+            forDecorationViewOfKind: &lt;#ViewController#&gt;.sectionBackgroundDecorationElementKind)
+        return layout
+    }
+}
+
+extension &lt;#ViewController#&gt; {
+    private func configureHierarchy() {
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectionView.backgroundColor = UIColor.systemGray6
+        view.addSubview(collectionView)
+        collectionView.delegate = self
+    }
+    
+    private func configureDataSource() {
+        let valueCellRegistration = UICollectionView.CellRegistration&lt;UICollectionViewListCell, ItemLayoutKind&gt; {
+            (cell: UICollectionViewListCell, indexPath: IndexPath, itemIdentifier: ItemLayoutKind) in
+            var content = cell.defaultContentConfiguration()
+            content.text = itemIdentifier
+            cell.contentConfiguration = content
+        }
+        
+        let headerRegistration = UICollectionView.SupplementaryRegistration&lt;TitleSupplementaryView&gt;(elementKind: &lt;#ViewController#&gt;.sectionHeaderElementKind) { supplementaryView, elementKind, indexPath in
+            guard let snapshot = self.currentSnapshot else {
+                return
+            }
+            let sectionLayoutKind = snapshot.sectionIdentifiers[indexPath.section]
+            supplementaryView.label.text = sectionLayoutKind.rawValue
+        }
+        
+        dataSource = UICollectionViewDiffableDataSource&lt;SectionLayoutKind, ItemLayoutKind&gt;(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+            return collectionView.dequeueConfiguredReusableCell(
+                using: valueCellRegistration,
+                for: indexPath,
+                item: itemIdentifier)
+        })
+        
+        dataSource.supplementaryViewProvider = {
+            (collectionView: UICollectionView, elementKind: String, indexPath: IndexPath) -&gt; UICollectionReusableView? in
+            return collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
+        }
+        
+        // initial data
+        var snapshot = NSDiffableDataSourceSnapshot&lt;SectionLayoutKind, ItemLayoutKind&gt;()
+        
+//        for section in 0..&lt;10 {
+//            snapshot.appendSections([section])
+//            snapshot.appendItems([], toSection: section)
+//        }
+        
+        dataSource.apply(snapshot, animatingDifferences: false)
+        currentSnapshot = snapshot
+    }
+}
+
+extension &lt;#ViewController#&gt;: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let sectionLayoutKind = dataSource.sectionIdentifier(for: indexPath.section) else { return }
+        guard let itemLayoutKind = dataSource.itemIdentifier(for: indexPath) else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            collectionView.deselectItem(at: indexPath, animated: true)
+        }
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D0A1D15A-6933-461D-A46D-6FDEB9683904</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>创建 layout</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>vc-cv-create</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

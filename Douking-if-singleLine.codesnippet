@@ -14,6 +14,8 @@
 	<string>C98AA0FB-34D0-43F6-B967-8DF484B915C2</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>单行if语句</string>
 	<key>IDECodeSnippetUserSnippet</key>

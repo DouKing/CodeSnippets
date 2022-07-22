@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>__vc-cv-define</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    private static let sectionHeaderElementKind = &lt;#"section-header-element-kind"#&gt;
+    private static let sectionBackgroundDecorationElementKind = &lt;#"section-background-element-kind"#&gt;
+    
+    private typealias SectionLayoutKind = &lt;#Int#&gt;
+    private typealias ItemLayoutKind = &lt;#String#&gt;
+
+    private var dataSource: UICollectionViewDiffableDataSource&lt;SectionLayoutKind, ItemLayoutKind&gt;! = nil
+    private var collectionView: UICollectionView! = nil
+    private var currentSnapshot: NSDiffableDataSourceSnapshot&lt;SectionLayoutKind, ItemLayoutKind&gt;! = nil</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7A033F11-BBF6-4F8A-89A8-2AB9BFD31988</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>定义 collection view</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>vc-cv-define</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

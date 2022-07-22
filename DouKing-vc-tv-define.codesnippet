@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>__vc-tv-define</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private typealias SectionType = &lt;#String#&gt;
+private typealias ItemType = &lt;#NSManagedObjectID#&gt;
+private let sectionHeaderReuseIdentifier = &lt;#"sectionHeaderReuseIdentifier"#&gt;
+private let cellReuseIdentifier = &lt;#"cellReuseIdentifier"#&gt;
+
+private var dataSource: DataSource!
+private var tableView: UITableView!</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>694E7B0D-0FD9-4841-835E-C5C8D7A20A18</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>vc-tv-define</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

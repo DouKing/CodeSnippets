@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>__vc-tv-create</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension &lt;#ViewController#&gt; {
+    private func configureHierarchy() {
+        tableView = UITableView(frame: .zero, style: .insetGrouped)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        view.addSubview(tableView)
+    }
+    
+    private func configureDataSource() {
+        dataSource = DataSource(tableView: tableView) {[unowned self] (tableView, indexPath, mountain) -&gt; UITableViewCell? in
+            guard let balance = try? CoreDataStack.shared.managedObjectContext.existingObject(with: mountain)
+                    as? Balance else {
+                return nil
+            }
+            let cell = tableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifier, for: indexPath)
+            var content = cell.defaultContentConfiguration()
+            content.text = balance.intro
+            content.secondaryText = "\(balance.money)"
+            cell.contentConfiguration = content
+            return cell
+        }
+    }
+}
+
+extension &lt;#ViewController#&gt; {
+    // Subclassing our data source to supply various UITableViewDataSource methods
+    private class DataSource: UITableViewDiffableDataSource&lt;SectionType, ItemType&gt; {
+        
+        // MARK: header/footer titles support
+        
+        override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -&gt; String? {
+            return "Header \(section)"
+        }
+        override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -&gt; String? {
+            return "Footer \(section)"
+        }
+        
+        // MARK: editing support
+        
+        override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -&gt; Bool {
+            return true
+        }
+        
+        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                if let identifierToDelete = itemIdentifier(for: indexPath) {
+                    var snapshot = self.snapshot()
+                    snapshot.deleteItems([identifierToDelete])
+                    apply(snapshot)
+                }
+            }
+        }
+    }
+}
+
+extension &lt;#ViewController#&gt;: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>46B7C925-0627-4F3A-A6FD-C5D39BB6CE24</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>vc-tv-create</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
