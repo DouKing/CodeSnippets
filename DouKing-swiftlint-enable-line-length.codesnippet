@@ -9,11 +9,13 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// swiftlint:enable line_length</string>
+	<string>// swiftlint:enable &lt;#line_length#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>DC47CDAD-85BB-471D-B8AC-30F62AE4CA3C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>swiftlint enable line length</string>
 	<key>IDECodeSnippetUserSnippet</key>

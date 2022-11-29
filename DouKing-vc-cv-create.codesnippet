@@ -6,8 +6,8 @@
 	<string>__vc-cv-create</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
 		<string>ClassImplementation</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>extension &lt;#ViewController#&gt; {
@@ -47,14 +47,6 @@
 }
 
 extension &lt;#ViewController#&gt; {
-    private func configureHierarchy() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
-        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        collectionView.backgroundColor = UIColor.systemGray6
-        view.addSubview(collectionView)
-        collectionView.delegate = self
-    }
-    
     private func configureDataSource() {
         let valueCellRegistration = UICollectionView.CellRegistration&lt;UICollectionViewListCell, ItemLayoutKind&gt; {
             (cell: UICollectionViewListCell, indexPath: IndexPath, itemIdentifier: ItemLayoutKind) in
@@ -63,20 +55,24 @@ extension &lt;#ViewController#&gt; {
             cell.contentConfiguration = content
         }
         
-        let headerRegistration = UICollectionView.SupplementaryRegistration&lt;TitleSupplementaryView&gt;(elementKind: &lt;#ViewController#&gt;.sectionHeaderElementKind) { supplementaryView, elementKind, indexPath in
-            guard let snapshot = self.currentSnapshot else {
-                return
+        let headerRegistration = UICollectionView.SupplementaryRegistration&lt;TitleSupplementaryView&gt;(
+            elementKind: &lt;#ViewController#&gt;.sectionHeaderElementKind) {
+                supplementaryView, elementKind, indexPath in
+                guard let snapshot = self.currentSnapshot else {
+                    return
+                }
+                let sectionLayoutKind = snapshot.sectionIdentifiers[indexPath.section]
+                supplementaryView.label.text = sectionLayoutKind.rawValue
             }
-            let sectionLayoutKind = snapshot.sectionIdentifiers[indexPath.section]
-            supplementaryView.label.text = sectionLayoutKind.rawValue
-        }
         
-        dataSource = UICollectionViewDiffableDataSource&lt;SectionLayoutKind, ItemLayoutKind&gt;(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
-            return collectionView.dequeueConfiguredReusableCell(
-                using: valueCellRegistration,
-                for: indexPath,
-                item: itemIdentifier)
-        })
+        dataSource = UICollectionViewDiffableDataSource&lt;SectionLayoutKind, ItemLayoutKind&gt;(
+            collectionView: collectionView, 
+            cellProvider: { collectionView, indexPath, itemIdentifier in
+                return collectionView.dequeueConfiguredReusableCell(
+                    using: valueCellRegistration,
+                    for: indexPath,
+                    item: itemIdentifier)
+            })
         
         dataSource.supplementaryViewProvider = {
             (collectionView: UICollectionView, elementKind: String, indexPath: IndexPath) -&gt; UICollectionReusableView? in
@@ -92,14 +88,13 @@ extension &lt;#ViewController#&gt; {
 //        }
         
         dataSource.apply(snapshot, animatingDifferences: false)
-        currentSnapshot = snapshot
     }
 }
 
 extension &lt;#ViewController#&gt;: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let sectionLayoutKind = dataSource.sectionIdentifier(for: indexPath.section) else { return }
-        guard let itemLayoutKind = dataSource.itemIdentifier(for: indexPath) else { return }
+        // guard let sectionLayoutKind = dataSource.sectionIdentifier(for: indexPath.section) else { return }
+        // guard let itemLayoutKind = dataSource.itemIdentifier(for: indexPath) else { return }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             collectionView.deselectItem(at: indexPath, animated: true)
         }

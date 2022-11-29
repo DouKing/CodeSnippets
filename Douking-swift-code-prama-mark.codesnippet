@@ -6,18 +6,19 @@
 	<string>mark</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    //--------------------------------------------------------------------------------
+	<string>    //------------------------------------------------------------------------------
     // MARK: - &lt;#Life cycle#&gt;
-    //--------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>CDD734BD-96FF-4661-9991-1A58F1A53107</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Pragma Mark</string>
 	<key>IDECodeSnippetUserSnippet</key>

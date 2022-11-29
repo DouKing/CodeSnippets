@@ -3,24 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>__swiftlint_disable_line_length</string>
+	<string>mark</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// swiftlint:disable:next &lt;#line_length#&gt;</string>
+	<string>// MARK: &lt;#- Message#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B26479E4-72E9-40D6-AA3B-722761137B0C</string>
+	<string>70445375-EC64-4364-94FE-D40445BD39B3</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>swiftlint disable line_length</string>
+	<string>Pragma Mark</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

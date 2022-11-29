@@ -3,21 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>__swiftlint_disable_line_length</string>
+	<string>__lazyvar</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// swiftlint:disable:next &lt;#line_length#&gt;</string>
+	<string>lazy var &lt;#restLabel#&gt;: &lt;#UILabel#&gt; = {
+    let this = &lt;#UILabel()#&gt;
+    this.translatesAutoresizingMaskIntoConstraints = false
+    return this
+}()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B26479E4-72E9-40D6-AA3B-722761137B0C</string>
+	<string>CFE7BD8D-07AD-4760-8CD9-23332E494404</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>swiftlint disable line_length</string>
+	<string>lazy property</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -16,8 +16,14 @@
     private typealias ItemLayoutKind = &lt;#String#&gt;
 
     private var dataSource: UICollectionViewDiffableDataSource&lt;SectionLayoutKind, ItemLayoutKind&gt;! = nil
-    private var collectionView: UICollectionView! = nil
-    private var currentSnapshot: NSDiffableDataSourceSnapshot&lt;SectionLayoutKind, ItemLayoutKind&gt;! = nil</string>
+    private lazy var collectionView: UICollectionView = {
+        let this = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
+        this.translatesAutoresizingMaskIntoConstraints = false
+        this.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        this.backgroundColor = UIColor.systemGray6
+        this.delegate = self
+        return this
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>7A033F11-BBF6-4F8A-89A8-2AB9BFD31988</string>
 	<key>IDECodeSnippetLanguage</key>

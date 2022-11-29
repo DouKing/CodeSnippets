@@ -10,12 +10,12 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>lazy var &lt;#name#&gt;Label: UILabel = {
-		let label = UILabel()
-	label.font = UIFont.&lt;#mdf_regularPingFSCFont(ofSize: 14)#&gt;
-	label.textColor = &lt;#.hex("333333")#&gt;
-	&lt;#label.text = ""#&gt;
-		return label
-	}()</string>
+    let this = UILabel()
+    this.translatesAutoresizingMaskIntoConstraints = false
+	this.font = UIFont.&lt;#mdf_regularPingFSCFont(ofSize: 14)#&gt;
+	this.textColor = &lt;#.hex("333333")#&gt;
+    return this
+}()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>5B1D4E7D-E6CD-41AB-ADEE-833F89E74E3B</string>
 	<key>IDECodeSnippetLanguage</key>
