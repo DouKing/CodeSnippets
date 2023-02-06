@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>__createcollectionview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UICollectionViewLayout *)createLayout {
+	NSCollectionLayoutSize *itemSize = [NSCollectionLayoutSize sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:1.0] heightDimension:[NSCollectionLayoutDimension fractionalHeightDimension:1.0]];
+	NSCollectionLayoutItem *item = [NSCollectionLayoutItem itemWithLayoutSize:itemSize];
+	
+	NSCollectionLayoutSize *groupSize = [NSCollectionLayoutSize sizeWithWidthDimension:[NSCollectionLayoutDimension fractionalWidthDimension:1.0] heightDimension:[NSCollectionLayoutDimension absoluteDimension:44]];
+	NSCollectionLayoutGroup *group = [NSCollectionLayoutGroup horizontalGroupWithLayoutSize:groupSize subitem:item count:2];
+	CGFloat spacing = 10;
+	group.interItemSpacing = [NSCollectionLayoutSpacing fixedSpacing:spacing];
+	
+	NSCollectionLayoutSection *section = [NSCollectionLayoutSection sectionWithGroup:group];
+	section.interGroupSpacing = spacing;
+	UICollectionViewCompositionalLayout *layout = [[UICollectionViewCompositionalLayout alloc] initWithSection:section];
+	[section setContentInsets:NSDirectionalEdgeInsetsMake(0, 10, 0, 10)];
+	return layout;
+}
+
+- (UICollectionView *)collectionView {
+	if (!_collectionView) {
+		_collectionView = ({
+			UICollectionView *cv = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:[self createLayout]];
+			cv.translatesAutoresizingMaskIntoConstraints = NO;
+			cv.backgroundColor = [UIColor whiteColor];
+			cv.showsHorizontalScrollIndicator = NO;
+			cv;
+		});
+	}
+	return _collectionView;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>72E2D956-DB81-4FC0-B03D-70AA329267C6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Diffable Collection View Create</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
