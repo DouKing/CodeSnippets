@@ -6,7 +6,7 @@
 	<string>__definecollectionview</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>@property (nullable, nonatomic, strong) UICollectionView *collectionView;
