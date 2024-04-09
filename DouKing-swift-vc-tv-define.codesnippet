@@ -9,13 +9,29 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private typealias SectionType = &lt;#String#&gt;
-private typealias ItemType = &lt;#NSManagedObjectID#&gt;
+	<string>private typealias SectionType = String
+private typealias ItemType = String
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+    self.view.addSubview(self.tableView)
+    self.configureDataSource()
+}
+
+// MARK: - Property
+
 private let sectionHeaderReuseIdentifier = &lt;#"sectionHeaderReuseIdentifier"#&gt;
 private let cellReuseIdentifier = &lt;#"cellReuseIdentifier"#&gt;
 
 private var dataSource: DataSource!
-private var tableView: UITableView!</string>
+
+private lazy var tableView: UITableView = {
+    let this = UITableView(frame: .zero, style: .insetGrouped)
+    this.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+    this.translatesAutoresizingMaskIntoConstraints = false
+    this.delegate = self
+    return this
+}()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>694E7B0D-0FD9-4841-835E-C5C8D7A20A18</string>
 	<key>IDECodeSnippetLanguage</key>

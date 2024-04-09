@@ -10,24 +10,14 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>extension &lt;#ViewController#&gt; {
-    private func configureHierarchy() {
-        tableView = UITableView(frame: .zero, style: .insetGrouped)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.delegate = self
-        view.addSubview(tableView)
-    }
-    
     private func configureDataSource() {
-        dataSource = DataSource(tableView: tableView) {[unowned self] (tableView, indexPath, mountain) -&gt; UITableViewCell? in
-            guard let balance = try? CoreDataStack.shared.managedObjectContext.existingObject(with: mountain)
-                    as? Balance else {
-                return nil
-            }
+        self.dataSource = DataSource(tableView: self.tableView) {
+            [weak self] (tableView, indexPath, mountain) -&gt; UITableViewCell? in
+            guard let self else { return nil }
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifier, for: indexPath)
             var content = cell.defaultContentConfiguration()
-            content.text = balance.intro
-            content.secondaryText = "\(balance.money)"
+            content.text = mountain
             cell.contentConfiguration = content
             return cell
         }
@@ -35,7 +25,6 @@
 }
 
 extension &lt;#ViewController#&gt; {
-    // Subclassing our data source to supply various UITableViewDataSource methods
     private class DataSource: UITableViewDiffableDataSource&lt;SectionType, ItemType&gt; {
         
         // MARK: header/footer titles support

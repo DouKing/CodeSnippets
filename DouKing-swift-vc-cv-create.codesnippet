@@ -6,8 +6,8 @@
 	<string>__vc-cv-create</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
 		<string>TopLevel</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>extension &lt;#ViewController#&gt; {
@@ -58,10 +58,7 @@ extension &lt;#ViewController#&gt; {
         let headerRegistration = UICollectionView.SupplementaryRegistration&lt;TitleSupplementaryView&gt;(
             elementKind: &lt;#ViewController#&gt;.sectionHeaderElementKind) {
                 supplementaryView, elementKind, indexPath in
-                guard let snapshot = self.currentSnapshot else {
-                    return
-                }
-                let sectionLayoutKind = snapshot.sectionIdentifiers[indexPath.section]
+                let sectionLayoutKind = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
                 supplementaryView.label.text = sectionLayoutKind.rawValue
             }
         
